@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flipbook</title>
+  </head>
+  <style>
+    body {
+      overflow: hidden;
+      background: url("bg.jpg");
+      background-size: 100% 100vh;
+      background-repeat: no-repeat;
+    }
+
+    #album {
+      width: 600px;
+      height: 500px;
+      margin: 5% auto;
+    }
+
+    #album div {
+      border-radius: 7px;
+    }
+  </style>
+  <body>
+    <div id="album">
+      <div style="background: url('flip1.jpg'); background-size: contain"></div>
+      <div style="background: url('flip5.jpg'); background-size: contain"></div>
+      <div style="background: url('flip2.jpg'); background-size: contain"></div>
+      <div style="background: url('flip4.jpg'); background-size: contain"></div>
+      <div style="background: url('flip3.jpg'); background-size: contain"></div>
+      <div style="background: url('flip3.jpg'); background-size: contain"></div>
+      <div style="background: url('flip4.jpg'); background-size: contain"></div>
+      <div style="background: url('flip2.jpg'); background-size: contain"></div>
+      <div style="background: url('flip5.jpg'); background-size: contain"></div>
+      <div style="background: url('flip1.jpg'); background-size: contain"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="turn.js"></script>
+    <script>
+      $("#album").turn({ gradients: true, acceleration: true });
+    </script>
+  </body>
+</html>
